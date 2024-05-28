@@ -20,9 +20,8 @@ public class LibraryServiceImpl implements LibraryService {
 //To request for a book
     @Override
     public String requestBook(Person person, Book book, String borrower) {
-       if (book.isAvailable()){
-        return "Book is not Available";
-    }
+       if (book.isAvailable())  return "Book is not Available";
+
     personPriorityQueue.add(person);
      return person.getFullName() + "Has requested for " + book.getBookTitle();
 
